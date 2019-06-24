@@ -113,16 +113,20 @@
 		/**
 		 * @param $user_name
 		 *  string User name.
+		 * @param $table
+		 *  string Table name.
+		 * @param $user_name_column
+		 *  string User name column name.
 		 * @return bool
 		 *
-		 *  Returns true if user name & email address exist, false if not.
+		 *  Returns true if email exists, false if not.
 		 */
-		public static function doesUserNameExist($user_name)
+		public static function doesUserNameExist($user_name, $table, $user_name_column)
 		{
 			$conn = Utility::pdoConnect();
 			
-			$check_user_name_query = $conn->prepare("SELECT gebruiker_gebruikersnaam FROM gebruikers
-																   WHERE gebruiker_gebruikersnaam = :user_name");
+			$check_user_name_query = $conn->prepare("SELECT $user_name_column FROM $table
+																   WHERE $user_name_column = :user_name");
 			$check_user_name_query->bindParam("user_name", $user_name);
 			$check_user_name_query->execute();
 			
@@ -135,17 +139,21 @@
 		
 		/**
 		 * @param $email
-		 *  string Email.
+         *  string Email address.
+		 * @param $table
+         *  string Table name.
+		 * @param $email_column
+         *  string Email column name.
 		 * @return bool
-		 *
-		 *  Returns true if email exists, false if not.
+         *
+         *  Returns true if email exists, false if not.
 		 */
-		public static function doesEmailExist($email)
+		public static function doesEmailExist($email, $table, $email_column)
 		{
 			$conn = Utility::pdoConnect();
 			
-			$check_user_name_query = $conn->prepare("SELECT gebruiker_gebruikersnaam FROM gebruikers
-																   WHERE gebruiker_email = :email");
+			$check_user_name_query = $conn->prepare("SELECT * FROM $table
+																   WHERE $email_column = :email");
 			$check_user_name_query->bindParam("email", $email);
 			$check_user_name_query->execute();
 			
@@ -181,11 +189,10 @@
                     <table class='table'>
                         <thead class='thead-light'>
                         <tr>
-                            <th scope='col'>Gebruikers id</th>
-                            <th scope='col'>Gebruikers naam</th>
-                            <th scope='col'>Gebruikers email</th>
-                            <th scope='col'>Gebruikers wachtwoord</th>
-                            <th scope='col'>Gebruikers admin_status</th>
+                            <th scope='col'>id</th>
+                            <th scope='col'>naam</th>
+                            <th scope='col'>email</th>
+                            <th scope='col'>admin_status</th>
                             <th scope='col'>wijzig</th>
                             <th scope='col'>verwijder</th>
                         </tr>
@@ -195,7 +202,6 @@
                                 <th scope='row'><?= $row['gebruiker_id'] ?></th>
                                 <td><?= $row['gebruiker_gebruikersnaam'] ?></td>
                                 <td><?= $row['gebruiker_email'] ?></td>
-                                <td><?= $row['gebruiker_wachtwoord'] ?></td>
                                 <td><?= $row['gebruiker_admin_status'] ?></td>
                                 <td><a href="<?= $row['gebruiker_id'] ?>">
                                         Wijzig
