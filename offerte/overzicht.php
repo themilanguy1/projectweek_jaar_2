@@ -16,7 +16,7 @@
         <div class="col-md-6">
             <h2>Admin dashboard</h2>
         </div>
-        <div class="col-md-3 text-right">
+        <div class="col-md-2 text-right">
             <!--			--><?php
 				//				if (Session::loginStatus()) {
 				//					if (Session::adminStatus()) {
@@ -32,7 +32,7 @@
 				//				}
 				//			?>
         </div>
-        <div class="col-md-3 text-right">
+        <div class="col-md-4 text-right">
             <a href="toevoegen.php" class="btn btn-primary">Offerte toevoegen</a>
             <a href="../home.php" class="btn btn-primary">Home</a>
         </div>

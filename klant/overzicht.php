@@ -13,10 +13,10 @@
 <body>
 <div class="container-flex">
     <div class="row" style="margin-top:0.5em;">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <h2>Admin dashboard</h2>
         </div>
-        <div class="col-md-3 text-right">
+        <div class="col-md-4 text-right">
             <!--			--><?php
 				//				if (Session::loginStatus()) {
 				//					if (Session::adminStatus()) {
@@ -49,7 +49,7 @@
                 </div>
             </form>
         </div>
-        <div class="col-md-3 text-right">
+        <div class="col-md-4 text-right">
             <a href="toevoegen.php" class="btn btn-primary">Klant toevoegen</a>
             <a href="../home.php" class="btn btn-primary">Home</a>
         </div>

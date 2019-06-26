@@ -62,8 +62,7 @@
                 </div>
                 <div class="form-group">
                     <label>memo</label>
-                    <textarea rows="3" class="form-control" name="memo">
-                    </textarea>
+                    <textarea rows="3" class="form-control" name="memo"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Toevoegen</button>
             </form>

@@ -73,7 +73,6 @@
                         <th scope='col' style="width: 50%;">klus beschrijving</th>
                         <th scope='col'>prijs</th>
                         <th scope='col'>status</th>
-                        <th scope='col'>wijzig</th>
                         <th scope='col'>verwijder</th>
                     </tr>
                     <tbody>
@@ -84,21 +83,6 @@
                             <td><?= $row['klus_beschrijving'] ?></td>
                             <td>€<?= $row['prijs'] ?></td>
                             <td><?= $row['status'] ?></td>
-                            <td>
-                                <form method="post" action="wijzigen.php">
-<!--                                    <input type="hidden" name="id" value="--><?//= $row['id'] ?><!--">-->
-<!--                                    <input type="hidden" name="name" value="--><?//= $row['naam'] ?><!--">-->
-<!--                                    <input type="hidden" name="email" value="--><?//= $row['email'] ?><!--">-->
-<!--                                    <input type="hidden" name="address" value="--><?//= $row['adres'] ?><!--">-->
-<!--                                    <input type="hidden" name="place" value="--><?//= $row['plaats'] ?><!--">-->
-<!--                                    <input type="hidden" name="postal_code" value="--><?//= $row['postcode'] ?><!--">-->
-<!--                                    <input type="hidden" name="phone" value="--><?//= $row['telefoon'] ?><!--">-->
-<!--                                    <input type="hidden" name="memo" value="--><?//= $row['memo'] ?><!--">-->
-                                    <button type="submit" class="btn btn-success">
-                                        <i class="fa fa-arrow-circle-right fa-lg"></i> Wijzigen
-                                    </button>
-                                </form>
-                            </td>
                             <td>
                                 <?php
                                     if($row['status'] == 0) {

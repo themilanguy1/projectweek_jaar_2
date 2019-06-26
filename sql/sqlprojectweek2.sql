@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 24 jun 2019 om 12:25
+-- Gegenereerd op: 26 jun 2019 om 11:27
 -- Serverversie: 10.1.29-MariaDB
 -- PHP-versie: 7.1.12
 
@@ -30,22 +30,38 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `factuur` (
   `id` int(11) NOT NULL,
-  `betaald_status` smallint(6) NOT NULL
+  `datum` date NOT NULL,
+  `prijs` decimal(19,2) NOT NULL,
+  `status_betaald` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `factuur`
+--
+
+INSERT INTO `factuur` (`id`, `datum`, `prijs`, `status_betaald`) VALUES
+(1, '2019-06-18', '2001.12', 0),
+(2, '2019-06-28', '192.98', 1);
 
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `factuurregel`
+-- Tabelstructuur voor tabel `factuur_regel`
 --
 
-CREATE TABLE `factuurregel` (
+CREATE TABLE `factuur_regel` (
   `offerte_id` int(11) NOT NULL,
-  `factuur_id` int(11) NOT NULL,
-  `titel klus` varchar(255) NOT NULL,
-  `prijs` double(10,2) NOT NULL,
-  `datum` date NOT NULL
+  `factuur_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `factuur_regel`
+--
+
+INSERT INTO `factuur_regel` (`offerte_id`, `factuur_id`) VALUES
+(1, 1),
+(1, 2),
+(2, 1);
 
 -- --------------------------------------------------------
 
@@ -59,7 +75,7 @@ CREATE TABLE `klanten` (
   `email` varchar(50) NOT NULL,
   `adres` varchar(255) NOT NULL,
   `plaats` varchar(255) NOT NULL,
-  `postcode` varchar(7) NOT NULL,
+  `postcode` varchar(6) NOT NULL,
   `telefoon` varchar(50) NOT NULL,
   `memo` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -69,10 +85,8 @@ CREATE TABLE `klanten` (
 --
 
 INSERT INTO `klanten` (`id`, `naam`, `email`, `adres`, `plaats`, `postcode`, `telefoon`, `memo`) VALUES
-(1, 'bob boudesteijn', 'bob@hotmail.com', 'veenmos 23', 'rotterdam', '1234 AB', '0627556674', ''),
-(2, 'milan gupta', 'milan@gmail.com', 'milanstraat 5', 'schiebroek', '3012 XH', '0612345678', ''),
-(3, 'naam', 'email@email.com', 'adres', 'soeinfseoi', '2222XH', '2', '                    '),
-(4, 'w', 'themilanguy1@gmail.com', '2', '2', '2222XH', '0612345678', '                    ');
+(1, 'bob boudesteijn', 'bob@hotmail.com', 'veenmos 23', 'rotterdam', '1234AB', '0627556674', '                    '),
+(2, 'milan gupta', 'milan@gmail.com', 'milanstraat 5', 'schiebroek', '3012 X', '0612345678', '');
 
 -- --------------------------------------------------------
 
@@ -83,17 +97,35 @@ INSERT INTO `klanten` (`id`, `naam`, `email`, `adres`, `plaats`, `postcode`, `te
 CREATE TABLE `offertes` (
   `id` int(11) NOT NULL,
   `klant_id` int(11) NOT NULL,
-  `beschrijving klus` varchar(255) NOT NULL
+  `datum` date NOT NULL,
+  `klus_beschrijving` varchar(255) NOT NULL,
+  `prijs` decimal(19,2) NOT NULL,
+  `status` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `offertes`
+--
+
+INSERT INTO `offertes` (`id`, `klant_id`, `datum`, `klus_beschrijving`, `prijs`, `status`) VALUES
+(1, 1, '2019-06-19', 'aioenfoienf', '1.11', 1),
+(2, 1, '2019-06-17', '                    ', '1.00', 0),
+(4, 1, '2019-06-03', '12qwqwdawd', '1.00', 1);
 
 --
 -- Indexen voor geëxporteerde tabellen
 --
 
 --
--- Indexen voor tabel `factuurregel`
+-- Indexen voor tabel `factuur`
 --
-ALTER TABLE `factuurregel`
+ALTER TABLE `factuur`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexen voor tabel `factuur_regel`
+--
+ALTER TABLE `factuur_regel`
   ADD PRIMARY KEY (`offerte_id`,`factuur_id`);
 
 --

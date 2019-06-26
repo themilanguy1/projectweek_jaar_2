@@ -66,13 +66,17 @@
 			
 			<?php
 				if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-				    if(!isset($_POST['status'])) {
-				        $status = 0;
-				    } else {
-				        $status = 1;
-				    }
-					$offer = new Offer($_POST['offer_cust_id'], $_POST['date'], $_POST['work_description'],
-						$_POST['price'], $status);
+					$cust_id = $_POST['offer_cust_id'];
+					$date = $_POST['date'];
+					$work_description = $_POST['work_description'];
+					$price = $_POST['price'];
+					if (!isset($_POST['status'])) {
+						$status = 0;
+					} else {
+						$status = 1;
+					}
+					
+					$offer = new Offer($cust_id, $date, $work_description, $price, $status);
 					$offer->addOffer();
 					
 					header("Location: overzicht.php");
