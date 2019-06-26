@@ -1,13 +1,12 @@
 <?php
-	require_once('classes/Autoloader.php');
+	require_once('../classes/Autoloader.php');
 	Session::start();
-	
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="style/main.css">
+	<link rel="stylesheet" href="../style/main.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 </head>
@@ -32,7 +31,7 @@
 				//					die;
 				//				}
 				//			?>
-			<a href="klanten.php" class="btn btn-primary">Terug</a>
+			<a href="overzicht.php" class="btn btn-primary">Terug</a>
 		</div>
 		<div class="col-md-12">
 			<?php
@@ -84,7 +83,6 @@
 					$phone = $_POST['edit_phone'];
 					$memo = $_POST['edit_memo'];
 					
-					echo $postal_code;
 					if(Utility::check_postcode($postal_code)) {
 						$customer = new Customer($name, $email, $address, $place, $postal_code, $phone, $memo);
 						$customer->user_id = $id;

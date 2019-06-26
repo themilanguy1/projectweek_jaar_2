@@ -32,7 +32,7 @@
 		 *
 		 *  Gets new user ID from database table gebruikers.
 		 */
-		public static function getNewUserId($table, $id_column)
+		public static function getNewId($table, $id_column)
 		{
 			$conn = self::pdoConnect();
 			$users = $conn->query("SELECT COUNT($id_column) FROM $table")->fetchColumn();
@@ -81,7 +81,7 @@
 		 *
 		 *  Fetches user data.
 		 */
-		public static function fetch($table)
+		public static function fetchSQL($table)
 		{
 			$conn = Utility::pdoConnect();
 			$user_data = $conn->query("SELECT * FROM $table ")->fetchAll(PDO::FETCH_ASSOC);;
@@ -151,7 +151,7 @@
                     \z                              # eind
                 }x';                                # comment modus
 			
-			if ( preg_match($pattern,$postcode) )           // formaat juist
+			if (preg_match($pattern, $postcode))           // formaat juist
 				if ($postcode <= '9999XL')                  // hoogst mogelijke postcode
 					return true;
 			
@@ -184,6 +184,30 @@
 				return true;
 			} else {
 				return false;
+			}
+		}
+		
+		/**
+		 * @param $table
+		 *  string Table name.
+		 * @param $val_column
+		 *  string Name of column to use for value in input field.
+		 * @param $name_column
+		 *  string Name of column to use as identifier for user in dropdown.
+		 *
+		 *  Generates an html dropdown list of selected table and columns.
+		 */
+		public static function getDropdownSelect($table, $val_column, $name_column)
+		{
+			$conn = Utility::pdoConnect();
+			
+			$SQL_select = $conn->prepare("SELECT $val_column, $name_column FROM $table");
+			$SQL_select->execute();
+			
+			$result = $SQL_select->fetchAll();
+			
+			foreach ($result as $row) {
+				echo "<option value=" . $row[$val_column] . ">" . $row[$name_column] . "</option>";
 			}
 		}
 	}

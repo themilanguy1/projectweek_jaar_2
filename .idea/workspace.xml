@@ -2,21 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3aef0b21-18c8-431a-93d0-8872e25cd9ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/Customer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/klant_toevoegen.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/klant_wijzigen.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/klanten.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/sqlprojectweek2.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/style/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/Offer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/klant/overzicht.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/klant/toevoegen.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/klant/wijzigen.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/offerte/overzicht.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/offerte/toevoegen.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/offerte/wijzigen.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/Cart.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/Order.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/Products.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/User.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/Utility.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Utility.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/klant_toevoegen.php" beforeDir="false" afterPath="$PROJECT_DIR$/factuur/toevoegen.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/klant_wijzigen.php" beforeDir="false" afterPath="$PROJECT_DIR$/factuur/wijzigen.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/klanten.php" beforeDir="false" afterPath="$PROJECT_DIR$/factuur/overzicht.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,16 +51,39 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="sqlprojectweek2: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sqlprojectweek2@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sqlprojectweek2: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="klanten: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sqlprojectweek2@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sqlprojectweek2: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="offertes: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/klanten.php">
+        <entry file="file://$PROJECT_DIR$/klant/overzicht.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="739">
-              <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
+            <state relative-caret-position="494">
+              <caret line="60" column="47" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/offerte/overzicht.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -68,42 +91,82 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/Customer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="111" column="55" selection-start-line="111" selection-start-column="55" selection-end-line="111" selection-end-column="55" />
+            <state relative-caret-position="419">
+              <caret line="148" column="52" selection-start-line="148" selection-start-column="52" selection-end-line="148" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql/sqlprojectweek2.sql">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/offerte/toevoegen.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="67" column="59" lean-forward="true" selection-start-line="67" selection-start-column="59" selection-end-line="67" selection-end-column="59" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/Utility.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="182" column="71" selection-start-line="182" selection-start-column="71" selection-end-line="182" selection-end-column="71" />
+            <state relative-caret-position="1004">
+              <caret line="209" column="56" selection-start-line="209" selection-start-column="56" selection-end-line="209" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/klant_wijzigen.php">
+        <entry file="file://$PROJECT_DIR$/klant/wijzigen.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="90" column="43" lean-forward="true" selection-start-line="90" selection-start-column="43" selection-end-line="90" selection-end-column="43" />
+            <state relative-caret-position="537">
+              <caret line="85" column="44" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/klant_toevoegen.php">
+        <entry file="file://$PROJECT_DIR$/klant/toevoegen.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="80" column="41" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
+            <state relative-caret-position="613">
+              <caret line="84" column="58" selection-start-line="84" selection-start-column="58" selection-end-line="84" selection-end-column="58" />
+              <folding>
+                <element signature="e#796#811#0#PHP" expanded="true" />
+                <element signature="e#972#986#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/Offer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="104" column="61" selection-start-line="104" selection-start-column="61" selection-end-line="104" selection-end-column="61" />
+              <folding>
+                <element signature="e#580#603#0#HTML" expanded="true" />
+                <element signature="e#1191#1210#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/offerte/wijzigen.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="32" selection-end-line="98" selection-end-column="11" />
+              <folding>
+                <element signature="e#872#893#0#PHP" expanded="true" />
+                <element signature="e#1065#1085#0#PHP" expanded="true" />
+                <element signature="e#3238#3245#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/Session.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -118,6 +181,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>z</find>
+      <find>klant</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,14 +193,26 @@
         <option value="$PROJECT_DIR$/classes/Cart.php" />
         <option value="$PROJECT_DIR$/classes/Products.php" />
         <option value="$PROJECT_DIR$/admin_dashboard.php" />
-        <option value="$PROJECT_DIR$/classes/User.php" />
         <option value="$PROJECT_DIR$/style/main.css" />
-        <option value="$PROJECT_DIR$/home.php" />
         <option value="$PROJECT_DIR$/classes/Customers.php" />
         <option value="$PROJECT_DIR$/klanten.php" />
         <option value="$PROJECT_DIR$/klant_toevoegen.php" />
-        <option value="$PROJECT_DIR$/classes/Utility.php" />
         <option value="$PROJECT_DIR$/klant_wijzigen.php" />
+        <option value="$PROJECT_DIR$/wijzigen.php" />
+        <option value="$PROJECT_DIR$/klant/wijzigen.php" />
+        <option value="$PROJECT_DIR$/home.php" />
+        <option value="$PROJECT_DIR$/factuur/overzicht.php" />
+        <option value="$PROJECT_DIR$/factuur/toevoegen.php" />
+        <option value="$PROJECT_DIR$/factuur/wijzigen.php" />
+        <option value="$PROJECT_DIR$/classes/User.php" />
+        <option value="$PROJECT_DIR$/classes/SqlUtility.php" />
+        <option value="$PROJECT_DIR$/classes/Utility.php" />
+        <option value="$PROJECT_DIR$/offerte/wijzigen.php" />
+        <option value="$PROJECT_DIR$/klant/toevoegen.php" />
+        <option value="$PROJECT_DIR$/offerte/toevoegen.php" />
+        <option value="$PROJECT_DIR$/offerte/overzicht.php" />
+        <option value="$PROJECT_DIR$/klant/overzicht.php" />
+        <option value="$PROJECT_DIR$/classes/Offer.php" />
         <option value="$PROJECT_DIR$/classes/Customer.php" />
       </list>
     </option>
@@ -153,6 +229,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,6 +245,21 @@
             <path>
               <item name="projectweek_jaar_2" type="b2602c69:ProjectViewProjectNode" />
               <item name="projectweek_jaar_2" type="462c0819:PsiDirectoryNode" />
+              <item name="factuur" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projectweek_jaar_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projectweek_jaar_2" type="462c0819:PsiDirectoryNode" />
+              <item name="klant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projectweek_jaar_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projectweek_jaar_2" type="462c0819:PsiDirectoryNode" />
+              <item name="offerte" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projectweek_jaar_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projectweek_jaar_2" type="462c0819:PsiDirectoryNode" />
               <item name="sql" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -179,7 +271,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -193,10 +284,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\2019\projectweek_jaar_2\factuur" />
+      <recent name="C:\xampp\htdocs\2019\projectweek_jaar_2\klant" />
       <recent name="C:\xampp\htdocs\2019\projectweek_jaar_2\sql" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\2019\projectweek_jaar_2\offerte" />
+      <recent name="C:\xampp\htdocs\2019\projectweek_jaar_2\factuur" />
       <recent name="C:\xampp\htdocs\2019\projectweek_jaar_2\sql" />
     </key>
   </component>
@@ -222,83 +317,68 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561362173640</updated>
-      <workItem from="1561362174923" duration="10735000" />
+      <workItem from="1561362174923" duration="10837000" />
+      <workItem from="1561535146099" duration="4578000" />
     </task>
+    <task id="LOCAL-00001" summary="alles gedaan van dagdeel 2:&#10;-home page&#10;-klant toevoegen, wijzigen, verwijderen, inzien&#10;-klant zoeken&#10;-postcode/email validatie&#10;-memo veld">
+      <created>1561373410225</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1561373410225</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10735000" />
+    <option name="totallyTimeSpent" value="15415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" weight="0.32936078" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" weight="0.31876332" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.14232409" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="alles gedaan van dagdeel 2:&#10;-home page&#10;-klant toevoegen, wijzigen, verwijderen, inzien&#10;-klant zoeken&#10;-postcode/email validatie&#10;-memo veld" />
+    <option name="LAST_COMMIT_MESSAGE" value="alles gedaan van dagdeel 2:&#10;-home page&#10;-klant toevoegen, wijzigen, verwijderen, inzien&#10;-klant zoeken&#10;-postcode/email validatie&#10;-memo veld" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/classes/Cart.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/Products.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/Session.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Cart.php" />
+    <entry file="file://$PROJECT_DIR$/classes/Products.php" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3e213cfe-3e64-460f-8bda-6a955db740ba/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3eabd017-5bec-4590-90e8-5311e33818af/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/style/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="177" column="8" selection-start-line="177" selection-start-column="8" selection-end-line="218" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -312,41 +392,150 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/klant_toevoegen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="80" column="41" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sql/sqlprojectweek2.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="das://3eabd017-5bec-4590-90e8-5311e33818af/schema/sqlprojectweek2/table/offertes">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factuur/overzicht.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="75" selection-end-column="11" />
+          <folding>
+            <element signature="e#928#949#0#PHP" expanded="true" />
+            <element signature="e#1121#1141#0#PHP" expanded="true" />
+            <element signature="e#1578#1639#0#PHP" expanded="true" />
+            <element signature="e#2522#2557#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factuur/toevoegen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="92" selection-end-column="11" />
+          <folding>
+            <element signature="e#923#944#0#PHP" expanded="true" />
+            <element signature="e#1116#1136#0#PHP" expanded="true" />
+            <element signature="e#3211#3260#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factuur/wijzigen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="98" selection-end-column="11" />
+          <folding>
+            <element signature="e#872#893#0#PHP" expanded="true" />
+            <element signature="e#1065#1085#0#PHP" expanded="true" />
+            <element signature="e#3238#3245#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/klant/wijzigen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="85" column="44" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1836">
+          <caret line="108" column="12" selection-start-line="108" selection-start-column="12" selection-end-line="110" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Session.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/SqlUtility.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classes/Utility.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="182" column="71" selection-start-line="182" selection-start-column="71" selection-end-line="182" selection-end-column="71" />
+        <state relative-caret-position="1004">
+          <caret line="209" column="56" selection-start-line="209" selection-start-column="56" selection-end-line="209" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/klanten.php">
+    <entry file="file://$PROJECT_DIR$/offerte/wijzigen.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="739">
-          <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
+        <state relative-caret-position="357">
+          <caret line="21" column="32" selection-end-line="98" selection-end-column="11" />
+          <folding>
+            <element signature="e#872#893#0#PHP" expanded="true" />
+            <element signature="e#1065#1085#0#PHP" expanded="true" />
+            <element signature="e#3238#3245#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/klant_wijzigen.php">
+    <entry file="file://$PROJECT_DIR$/klant/toevoegen.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="90" column="43" lean-forward="true" selection-start-line="90" selection-start-column="43" selection-end-line="90" selection-end-column="43" />
+        <state relative-caret-position="613">
+          <caret line="84" column="58" selection-start-line="84" selection-start-column="58" selection-end-line="84" selection-end-column="58" />
+          <folding>
+            <element signature="e#796#811#0#PHP" expanded="true" />
+            <element signature="e#972#986#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/offerte/toevoegen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="67" column="59" lean-forward="true" selection-start-line="67" selection-start-column="59" selection-end-line="67" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/klant/overzicht.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="60" column="47" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/offerte/overzicht.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Offer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="104" column="61" selection-start-line="104" selection-start-column="61" selection-end-line="104" selection-end-column="61" />
+          <folding>
+            <element signature="e#580#603#0#HTML" expanded="true" />
+            <element signature="e#1191#1210#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/Customer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="111" column="55" selection-start-line="111" selection-start-column="55" selection-end-line="111" selection-end-column="55" />
+        <state relative-caret-position="419">
+          <caret line="148" column="52" selection-start-line="148" selection-start-column="52" selection-end-line="148" selection-end-column="52" />
         </state>
       </provider>
     </entry>

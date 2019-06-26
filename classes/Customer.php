@@ -5,42 +5,18 @@
 	 */
 	class Customer
 	{
-		/**
-		 * @var
-		 *  int User id.
-		 */
 		public $user_id;
-		
-		/**
-		 * @var
-		 * string Full name.
-		 */
+	
 		protected $name;
-		
-		/**
-		 * @var
-		 *  string Email address.
-		 */
+	
 		protected $email;
-		
-		/**
-		 * @var string Address.
-		 */
+
 		protected $address;
-		
-		/**
-		 * @var string City or town.
-		 */
+
 		protected $place;
-		
-		/**
-		 * @var string Postal code.
-		 */
+
 		protected $postal_code;
 		
-		/**
-		 * @var string Phone number.
-		 */
 		protected $phone;
 		
 		/**
@@ -61,7 +37,7 @@
 		public function __construct($name, $email, $address, $place, $postal_code, $phone, $memo = null)
 		{
 		    if(is_null($this->user_id)) {
-			    $this->user_id = Utility::getNewUserId("klanten", "id");
+			    $this->user_id = Utility::getNewId("klanten", "id");
             }
 			$this->name = $name;
 			$this->email = $email;
@@ -75,7 +51,7 @@
 		/**
 		 *  Registers new customer in database.
 		 */
-		public function registerCustomer()
+		public function addCustomer()
 		{
 			if (!Utility::doesValueExistInColumn($this->email, "klanten", "email")) {
 				$conn = Utility::pdoConnect();
@@ -92,8 +68,6 @@
 				$register->bindParam("telefoon", $this->phone);
 				$register->bindParam("memo", $this->memo);
 				$register->execute();
-				
-				header("Location: klanten.php");
 			} else {
 				echo "<p>Email adres bestaat al.</p>";
 			}
@@ -119,7 +93,7 @@
 				$update->bindParam("memo", $this->memo);
 				$update->execute();
 				
-				header("Location: klanten.php");
+				header("Location: overzicht.php");
 			} else {
 				echo "<p>Email adres bestaat al.</p>";
 			}
@@ -158,7 +132,7 @@
                             <td><?= $row['telefoon'] ?></td>
                             <td><?= $row['memo'] ?></td>
                             <td>
-                                <form method="post" action="klant_wijzigen.php">
+                                <form method="post" action="wijzigen.php">
                                     <input type="hidden" name="id" value="<?= $row['id'] ?>">
                                     <input type="hidden" name="name" value="<?= $row['naam'] ?>">
                                     <input type="hidden" name="email" value="<?= $row['email'] ?>">
@@ -172,7 +146,7 @@
                                     </button>
                                 </form>
                             </td>
-                            <td><a href= <?= "?del_id=" . $row['id'] ?>>
+                            <td><a href= <?= "?cust_del_id=" . $row['id'] ?>>
                                     Verwijderen
                                 </a></td>
                         </tr>

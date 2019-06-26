@@ -45,13 +45,13 @@
         </div>
         <div class="col-md-2">
             <div class="col-md-12">
-                <a href="klanten.php"><h4>Klanten</h4></a>
+                <a href="klant/overzicht.php"><h4>Klanten</h4></a>
             </div>
             <div class="col-md-12">
-                <a href="#"><h4>Offertes</h4></a>
+                <a href="offerte/overzicht.php"><h4>Offertes</h4></a>
             </div>
             <div class="col-md-12">
-                <a href="#"><h4>Facturen</h4></a>
+                <a href="factuur/overzicht.php"><h4>Facturen</h4></a>
             </div>
         </div>
     </div>

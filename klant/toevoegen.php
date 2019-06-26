@@ -1,12 +1,12 @@
 <?php
-	require_once('classes/Autoloader.php');
+	require_once('../classes/Autoloader.php');
 	Session::start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="../style/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 </head>
@@ -14,7 +14,7 @@
 <div class="container">
     <div class="row" style="margin-top:0.5em;">
         <div class="col-md-6">
-            <h2>Admin dashboard</h2>
+            <h2>Klant toevoegen</h2>
         </div>
         <div class="col-md-6 text-right">
             <!--			--><?php
@@ -31,7 +31,7 @@
 				//					die;
 				//				}
 				//			?>
-            <a href="klanten.php" class="btn btn-primary">Terug</a>
+            <a href="overzicht.php" class="btn btn-primary">Terug</a>
         </div>
         <div class="col-md-12">
             <form method="post">
@@ -53,8 +53,8 @@
                 </div>
                 <div class="form-group">
                     <label>postcode</label>
-                    <input type="text" class="form-control" name="postal_code"  accept-charset="utf-8" size="7"
-                           maxlength="7" placeholder="3012XH of 3012 XH" required>
+                    <input type="text" class="form-control" name="postal_code"  accept-charset="utf-8" size="6"
+                           maxlength="7" placeholder="bijv. 3012XH" required>
                 </div>
                 <div class="form-group">
                     <label>telefoon nr.</label>
@@ -80,7 +80,9 @@
 					
 					if(Utility::check_postcode($postal_code)) {
 						$customer = new Customer($name, $email, $address, $place, $postal_code, $phone, $memo);
-						$customer->registerCustomer();
+						$customer->addCustomer();
+						
+						header("Location: overzicht.php");
                     } else {
 					    echo "<h1>postcode is verkeerd.</h1>";
                     }
