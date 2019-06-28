@@ -36,6 +36,20 @@
         <div class="col-md-12">
             <form method="post">
                 <div class="form-group">
+                    <label>offerte</label>
+                    <select class="form-control" name="invoice_offer_id" required>
+			            <?php
+				            $conn = Utility::pdoConnect();
+				            $sql = $conn->query("SELECT DISTINCT * FROM klanten, offertes WHERE offertes.offerte_klant_id = klanten.klant_id")->fetchAll();
+				            $data = $sql;
+				            
+				            foreach ($data as $row) {
+				                echo "<option value =".$row['offerte_id'].">".$row['naam']."</option>";
+                            }
+			            ?>
+                    </select>
+                </div>
+                <div class="form-group">
                     <label>datum</label>
                     <input type="date" class="form-control" name="date" required>
                 </div>
@@ -52,6 +66,7 @@
 			
 			<?php
 				if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+				    $invoice_offer_id = $_POST['invoice_offer_id'];
 					$date = $_POST['date'];
 					$price = $_POST['price'];
 					if (!isset($_POST['status'])) {
@@ -60,10 +75,11 @@
 						$status = 1;
 					}
 					
-					$invoice = new Invoice($date, $price, $status);
+					$invoice = new Invoice($invoice_offer_id, $date, $price, $status);
 					$invoice->addInvoice();
 					
-					header("Location: overzicht.php");
+					var_dump($_POST);
+//					header("Location: overzicht.php");
 				}
 			?>
         </div>

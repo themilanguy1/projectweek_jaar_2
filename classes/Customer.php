@@ -37,7 +37,7 @@
 		public function __construct($name, $email, $address, $place, $postal_code, $phone, $memo = null)
 		{
 		    if(is_null($this->user_id)) {
-			    $this->user_id = Utility::getNewId("klanten", "id");
+			    $this->user_id = Utility::getNewId("klanten", "klant_id");
             }
 			$this->name = $name;
 			$this->email = $email;
@@ -56,7 +56,7 @@
 			if (!Utility::doesValueExistInColumn($this->email, "klanten", "email")) {
 				$conn = Utility::pdoConnect();
 				
-				$register = $conn->prepare("INSERT INTO klanten (id, naam, email,
+				$register = $conn->prepare("INSERT INTO klanten (klant_id, naam, email,
 							adres, plaats, postcode, telefoon, memo)
 							VALUES  (:id, :naam, :email, :adres, :plaats, :postcode, :telefoon, :memo)");
 				$register->bindParam("id", $this->user_id);
@@ -82,7 +82,7 @@
 				$conn = Utility::pdoConnect();
 				
 				$update = $conn->prepare("UPDATE klanten SET naam = :naam, email = :email, adres = :adres,
-                            plaats = :plaats, postcode = :postcode, telefoon = :telefoon, memo = :memo WHERE id = :id");
+                            plaats = :plaats, postcode = :postcode, telefoon = :telefoon, memo = :memo WHERE klant_id = :id");
 				$update->bindParam("id", $this->user_id);
 				$update->bindParam("naam", $this->name);
 				$update->bindParam("email", $this->email);

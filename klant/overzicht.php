@@ -59,7 +59,7 @@
 			<?php
 				if (isset($_GET['cust_del_id'])) {
 					$cust_del_id = $_GET['cust_del_id'];
-					Utility::deleteRow($cust_del_id, "klanten", "id");
+					Utility::deleteRow($cust_del_id, "klanten", "klant_id");
 				}
 				
 				if(isset($_GET['search'])) {

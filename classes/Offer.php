@@ -28,7 +28,7 @@
 		public function __construct($customer_id, $date, $work_description, $price, $status)
 		{
 		    if(is_null($this->id)) {
-			    $this->id = Utility::getNewId("offertes", "id");
+			    $this->id = Utility::getNewId("offertes", "offerte_id");
             }
 			$this->customer_id = $customer_id;
 			$this->date = $date;
@@ -44,7 +44,7 @@
         {
             $conn = Utility::pdoConnect();
             
-            $insert = $conn->prepare("INSERT into offertes (id, klant_id, datum, klus_beschrijving, prijs, status)
+            $insert = $conn->prepare("INSERT into offertes (offerte_id, offerte_klant_id, datum, klus_beschrijving, prijs, status)
                                                 VALUES (:id, :customer_id, :date, :work_description, :price, :status)");
             $insert->bindParam("id", $this->id);
             $insert->bindParam("customer_id", $this->customer_id);

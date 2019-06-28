@@ -39,7 +39,7 @@ CREATE TABLE `factuur` (
 -- Gegevens worden geëxporteerd voor tabel `factuur`
 --
 
-INSERT INTO `factuur` (`id`, `datum`, `prijs`, `status_betaald`) VALUES
+INSERT INTO `factuur` (factuur_id, `datum`, `prijs`, `status_betaald`) VALUES
 (1, '2019-06-18', '2001.12', 0),
 (2, '2019-06-28', '192.98', 1);
 
@@ -84,7 +84,7 @@ CREATE TABLE `klanten` (
 -- Gegevens worden geëxporteerd voor tabel `klanten`
 --
 
-INSERT INTO `klanten` (`id`, `naam`, `email`, `adres`, `plaats`, `postcode`, `telefoon`, `memo`) VALUES
+INSERT INTO `klanten` (klant_id, `naam`, `email`, `adres`, `plaats`, `postcode`, `telefoon`, `memo`) VALUES
 (1, 'bob boudesteijn', 'bob@hotmail.com', 'veenmos 23', 'rotterdam', '1234AB', '0627556674', '                    '),
 (2, 'milan gupta', 'milan@gmail.com', 'milanstraat 5', 'schiebroek', '3012 X', '0612345678', '');
 
@@ -107,7 +107,7 @@ CREATE TABLE `offertes` (
 -- Gegevens worden geëxporteerd voor tabel `offertes`
 --
 
-INSERT INTO `offertes` (`id`, `klant_id`, `datum`, `klus_beschrijving`, `prijs`, `status`) VALUES
+INSERT INTO `offertes` (offerte_id, offerte_klant_id, `datum`, `klus_beschrijving`, `prijs`, `status`) VALUES
 (1, 1, '2019-06-19', 'aioenfoienf', '1.11', 1),
 (2, 1, '2019-06-17', '                    ', '1.00', 0),
 (4, 1, '2019-06-03', '12qwqwdawd', '1.00', 1);
@@ -120,7 +120,7 @@ INSERT INTO `offertes` (`id`, `klant_id`, `datum`, `klus_beschrijving`, `prijs`,
 -- Indexen voor tabel `factuur`
 --
 ALTER TABLE `factuur`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (factuur_id);
 
 --
 -- Indexen voor tabel `factuur_regel`
@@ -132,13 +132,13 @@ ALTER TABLE `factuur_regel`
 -- Indexen voor tabel `klanten`
 --
 ALTER TABLE `klanten`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (klant_id);
 
 --
 -- Indexen voor tabel `offertes`
 --
 ALTER TABLE `offertes`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (offerte_id);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

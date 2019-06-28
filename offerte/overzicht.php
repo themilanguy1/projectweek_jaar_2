@@ -42,7 +42,7 @@
 		<?php
 			if (isset($_GET['offer_del_id'])) {
 				$offer_del_id = $_GET['offer_del_id'];
-				Utility::deleteRow($offer_del_id, "offertes", "id");
+				Utility::deleteRow($offer_del_id, "offertes", "offerte_id");
 			}
 
 				Offer::displayOffers(Utility::fetchSQL("offertes"));

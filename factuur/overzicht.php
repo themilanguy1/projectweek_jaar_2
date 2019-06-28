@@ -42,10 +42,10 @@
 			<?php
 				if (isset($_GET['invoice_del_id'])) {
 					$invoice_del_id = $_GET['invoice_del_id'];
-					Utility::deleteRow($invoice_del_id, "factuur", "id");
+					Utility::deleteRow($invoice_del_id, "factuur", "factuur_id");
 				}
 				
-				Invoice::displayInvoices(Utility::fetchSQL("factuur"));
+				Invoice::displayInvoices(Invoice::fetchInvoiceData());
 			?>
     </div>
 </div
