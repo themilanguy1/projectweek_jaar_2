@@ -54,7 +54,7 @@
                 <div class="form-group">
                     <label>postcode</label>
                     <input type="text" class="form-control" name="postal_code"  accept-charset="utf-8" size="6"
-                           maxlength="7" placeholder="bijv. 3012XH" required>
+                           maxlength="6" placeholder="bijv. 3012XH" required>
                 </div>
                 <div class="form-group">
                     <label>telefoon nr.</label>

@@ -58,6 +58,7 @@
 				<table class='table'>
 					<thead class='thead-light'>
 					<tr>
+						<th scope='col'>id</th>
 						<th scope='col'>datum</th>
 						<th scope='col'>prijs</th>
 						<th scope='col'>betalingsstatus</th>
@@ -66,6 +67,7 @@
 					<tbody>
 					<?php foreach ($data as $row) : ?>
 						<tr>
+                            <td><?= $row['id'] ?></td>
 							<td><?= $row['datum'] ?></td>
 							<td>€<?= $row['prijs'] ?></td>
 							<td><?= $row['status_betaald'] ?></td>
